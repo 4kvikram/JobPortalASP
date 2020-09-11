@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="JobPortal.MasterPage" %>
+<%@ Register Src="~/header.ascx" TagName="header" TagPrefix="wuc" %>
+<%@ Register Src="~/footer.ascx" TagName="footer" TagPrefix="wuc" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="headerMenu/jquery.js"></script>
+    <link href="headerMenu/menu.css" rel="stylesheet" />
+    <script src="headerMenu/menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <wuc:header id="hd" runat="server"></wuc:header>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+               
+                    <div id="menu">
+		<ul class="menu">
+			<li><a href="HomePage.aspx" class="parent"><span>Home</span></a>
+			
+			</li>
+			
+
+           
+
+
+            
+			<li><a href="helpPage.aspx"><span>Help</span></a></li>
+            <li><a href="ContactPage.aspx"><span>Contact</span></a></li>
+           
+			<li class="last"><a href="LoginPage.aspx"><span>LogIn</span></a></li>
+		</ul>
+	</div>
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <center>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                        </center>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <wuc:footer id="Ft" runat="server"></wuc:footer>
+                </td>
+
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>

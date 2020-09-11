@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="JobPortal.AdminMaster" %>
+<%@ Register Src="~/header.ascx" TagName="header" TagPrefix="wuc" %>
+<%@ Register Src="~/footer.ascx" TagName="footer" TagPrefix="wuc" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <script src="headerMenu/jquery.js"></script>
+    <link href="headerMenu/menu.css" rel="stylesheet" />
+    <script src="headerMenu/menu.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 1128px;
+        }
+        .imageStyle {
+        border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width:100%">
+            <tr>
+                <td class="auto-style2">
+                    <wuc:header id="hd" runat="server"></wuc:header>
+                </td>
+                <td class="auto-style1">&nbsp;<asp:Image ID="imgUser" runat="server" Height="76px" Width="75px" CssClass="imageStyle" BorderColor="Black" BorderWidth="2px" />
+                    <br />
+                    <asp:Label ID="lbluserName" runat="server" ></asp:Label>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2">
+               
+                    <div id="menu">
+		<ul class="menu">
+                        
+			<li><a href="AdminHomePage.aspx" class="parent"><span>Home</span></a>
+			
+			</li>
+			<li><a href="#"><span>Master Data</span></a>
+				<div><ul>
+
+					
+					<li><a href="AddCountryPage.aspx"><span>Add Country</span></a></li>
+                    <li><a href="AddStatePage.aspx"><span>Add State</span></a></li>
+                     <li><a href="SecurityQuestionPage.aspx"><span>Add Security Question</span></a></li>
+					<li><a href="AddJobProfile.aspx"><span>Add Job Profile</span></a></li>
+                        
+					<li><a href="AddQualification.aspx"><span>Add Qualification</span></a></li>
+                    
+					
+				</ul></div>
+			</li>
+
+
+
+            <li><a href="#"><span>Manage</span></a>
+				<div><ul>
+					<li><a href="ManageUserPage.aspx"><span>Manage User</span></a></li>
+					<li><a href="ManageCompanyPage.aspx"><span>Manage Company</span></a></li>	
+                    <li><a href="ManageJobs.aspx"><span>Manage Jobs</span></a></li>	
+				</ul></div>
+			</li>
+
+
+
+           
+            <li><a href="AddCompanyPage.aspx"><span>Add Company</span></a></li>
+            <li><a href="AddJobs.aspx"><span>Add Jobs</span></a></li>
+            <li><a href="applyedJob.aspx"><span>Job Requests</span></a></li>
+            
+            <li><a href="registrationPage.aspx"><span>Registration</span></a></li>
+              <li><a href="ChangePasswordAdmin.aspx"><span>Change Password</span></a></li>
+			<li class="last"><a href="logoutAdmin.aspx"><span>Logout</span></a></li>
+		</ul>
+	</div>
+                    
+
+
+                </td>
+            </tr>
+
+            <tr>
+                 <td colspan="2">
+                    <center>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                        </center>
+                </td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <wuc:footer id="Ft" runat="server"></wuc:footer>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>
